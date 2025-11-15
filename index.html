@@ -1,0 +1,117 @@
+<!-- Updated HTML: All clicks go to monetization link, and after 35 clicks also redirects -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>🔥 Free Fire Proxy Server — Unlimited Diamonds</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:"Poppins",sans-serif;
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      background: radial-gradient(circle at 10% 20%, #070712 0%, #0f0f18 40%), linear-gradient(135deg,#0b1020 0%, #2b0033 100%);
+      color:#fff;
+      padding:36px 16px;
+    }
+    body::before{
+      content:"";
+      position:fixed;left:-20%;top:-20%;width:140%;height:140%;
+      background:conic-gradient(from 120deg,#ff0055,#00ffee,#4400ff,#ff0055);
+      filter:blur(200px);opacity:.12;z-index:0;
+      animation:spin 20s linear infinite;
+    }
+    @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+    header h1{
+      font-family:"Orbitron";font-size:1.9rem;
+      background:linear-gradient(90deg,#ff0055,#00ffee);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    }
+    .grid{
+      width:100%;max-width:920px;
+      display:grid;gap:20px;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      z-index:2;
+    }
+    .card{
+      padding:12px;border-radius:14px;text-align:center;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.06);
+    }
+    .card img{width:100%;border-radius:8px;margin-bottom:10px}
+    .claim{
+      width:100%;padding:12px;
+      background:linear-gradient(90deg,#ff0055,#4400ff);
+      border:none;border-radius:10px;color:#fff;font-weight:700;
+      cursor:pointer;
+    }
+    footer{opacity:.6;margin-top:32px;font-size:.9rem}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🔥 Free Fire Proxy Server</h1>
+  <p>Use the secure proxy to unlock diamonds, skins & hidden features.</p>
+</header>
+
+<div class="controls">
+  <div class="counter">Total clicks: <span id="clickCount">0</span> / 35</div>
+</div>
+
+<main class="grid">
+
+  <div class="card">
+    <h3>Unlimited Diamonds Proxy</h3>
+    <img src="https://i.postimg.cc/X7GL6s1p/1.png">
+    <button class="claim">🔥 Download Proxy 🔥</button>
+  </div>
+
+  <div class="card">
+    <h3>Anti-Ban Secure VPN</h3>
+    <img src="https://i.postimg.cc/WbF8c5Y4/2.png">
+    <button class="claim">🔥 Download Proxy 🔥</button>
+  </div>
+
+  <div class="card">
+    <h3>FF Premium Server</h3>
+    <img src="https://i.postimg.cc/Kvkfh0p4/3.png">
+    <button class="claim">🔥 Download Proxy 🔥</button>
+  </div>
+
+  <div class="card">
+    <h3>Max Boost Proxy</h3>
+    <img src="https://i.postimg.cc/3J41Qtf7/4.png">
+    <button class="claim">🔥 Download Proxy 🔥</button>
+  </div>
+
+</main>
+
+<footer>© 2025 Free Fire Proxy Network | BETAZ FF</footer>
+
+<script>
+const MONETIZE = "https://www.effectivegatecpm.com/jdb3q7g6bg?key=0ee68f2ecbe08814869475bd996b55fa";
+const TOTAL = 35;
+
+let count = parseInt(localStorage.getItem("ff_clicks_final") || "0");
+document.getElementById("clickCount").textContent = count;
+
+document.querySelectorAll(".claim").forEach(btn => {
+  btn.addEventListener("click", () => {
+    window.open(MONETIZE, "_blank");
+    count = Math.min(count + 1, TOTAL);
+    document.getElementById("clickCount").textContent = count;
+    localStorage.setItem("ff_clicks_final", count);
+    if (count === TOTAL) {
+      window.open(MONETIZE, "_blank");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
